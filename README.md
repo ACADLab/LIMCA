@@ -27,26 +27,7 @@ This repository includes the complete implementation, dataset, and scripts to re
 
 To set up the LIMCA environment locally:
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/your-username/LIMCA.git
-   cd LIMCA
-   ```
-
-2. **Create a virtual environment and install dependencies:**
-
-   ```bash
-   python3 -m venv limca_env
-   source limca_env/bin/activate
-   pip install -r requirements.txt
-   ```
-
-3. **Dependencies include:**
-   - Python 3.8+
-   - SPICE simulation tools (e.g., HSPICE)
----
-
+1. 
 
 
 ## License
