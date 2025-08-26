@@ -1,35 +1,35 @@
 # LIMCA: LLM for Automating Analog In-Memory Computing Architecture Design Exploration
 
-**LIMCA** is a novel framework that leverages large language models (LLMs) to automate the design and evaluation of analog In-Memory Computing (IMC) crossbar architectures. By integrating an automated pipeline for SPICE netlist generation and validation, LIMCA significantly reduces design space exploration time and minimizes human intervention—all while satisfying strict power, area, and accuracy constraints.
+> ⚠️ **Under Construction**  
+> This repository is actively evolving. Installation and usage sections are being finalized. Updates will be pushed regularly.
 
 ---
 
 ## Overview
 
-The LIMCA framework addresses the challenges of manual, knowledge-intensive design processes in analog IMC by:
-- **Automating Design Space Exploration:** Systematically generating and evaluating a vast design space of IMC architectures under user-defined performance metrics.
-- **Leveraging LLMs:** Utilizing a fine-tune-free LLM-driven approach for generating circuit netlists and performing SPICE-level simulations.
-- **Enabling No-Human-In-Loop (NHIL) Verification:** Implementing an automated design verification phase that reduces manual debugging and iterative refinements.
+**LIMCA** is a novel framework that leverages large language models (LLMs) to automate the design and evaluation of analog In-Memory Computing (IMC) crossbar architectures. By integrating an automated pipeline for SPICE netlist generation and validation, LIMCA significantly reduces design space exploration time and minimizes human intervention—all while satisfying strict power, area, and accuracy constraints.
 
-This repository includes the complete implementation, dataset, and scripts to reproduce the experimental results presented in the paper.
+This repository includes the implementation, dataset stubs, and scripts to reproduce results from our paper (to be released). Sections marked “🚧 WIP” will be filled in as we land features.
+
+### Key Features
+- **Automated Design Generation** — Generate IMC crossbar designs under constraints (e.g., power ≤ 3 W, accuracy ≥ 96%).
+- **LLM-Based SPICE Netlist Creation** — Translate high-level specs into detailed SPICE netlists.
+- **No-Human-In-Loop (NHIL) Verification** — Automated verification for hardware-aware constraints.
+- **Extensible IMC Dataset** — Structured dataset capturing 400+ analog/digital IMC variants.
+
+---
+
+## Relationship to IMAC-Sim
+
+This project **builds upon** and **references** [iCAS-Lab/IMAC-Sim](https://github.com/iCAS-Lab/IMAC-Sim) as a Git submodule. We do **not** copy code from IMAC-Sim; we reference it at `extern/IMAC-Sim`.
+
+> If you’re cloning this repository, please use the `--recurse-submodules` flag below to fetch IMAC-Sim.
 
 ---
 
-## Key Features
+## Quick Start (🚧 WIP)
 
-- **Automated Design Generation:** Generate IMC crossbar designs based on specific power (≤3W), area, and accuracy (≥96%) constraints.
-- **LLM-Based SPICE Netlist Creation:** Convert high-level design specifications into detailed circuit netlists for SPICE simulations.
-- **Automated Verification:** Validate designs with an NHIL approach to ensure compliance with hardware-aware constraints.
-- **Extensible IMC Dataset:** A structured dataset that captures over 400 analog and digital IMC variations to support future model fine-tuning and design exploration.
-
----
-## Installation
-
-To set up the LIMCA environment locally:
-
-1. 
-
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+### 1) Clone with submodules
+```bash
+git clone --recurse-submodules https://github.com/ACADLab/LIMCA.git
+cd LIMCA
