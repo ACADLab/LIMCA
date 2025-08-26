@@ -2,7 +2,6 @@
 
 > ⚠️ **Under Construction**  
 > This repository is actively evolving. Installation and usage sections are being finalized. Updates will be pushed regularly.
-
 ---
 
 ## Overview
@@ -33,3 +32,63 @@ This project **builds upon** and **references** [iCAS-Lab/IMAC-Sim](https://gith
 ```bash
 git clone --recurse-submodules https://github.com/ACADLab/LIMCA.git
 cd LIMCA
+```
+
+If you already cloned without submodules:
+```bash
+git submodule update --init --recursive
+```
+
+---
+
+## Usage (🚧 WIP)
+
+Planned CLI:
+```bash
+limca generate \
+  --spec configs/crossbar/a3w3.yaml \
+  --constraints power<=3W accuracy>=96% \
+  --out runs/exp001
+
+limca verify --run runs/exp001 --nhil
+```
+
+---
+
+## Roadmap
+- [ ] Public configs for crossbar families
+- [ ] SPICE generation & validation flows
+- [ ] Reproducibility scripts
+- [ ] Results & tables
+- [ ] Dataset card + release notes
+
+---
+
+## Citing
+
+If you use LIMCA in your work, please cite:
+
+**LIMCA: LLM for Automating Analog In-Memory Computing Architecture Design Exploration**  
+[arXiv:2503.13301](https://arxiv.org/abs/2503.13301)
+
+BibTeX:
+```bibtex
+@misc{vungarala2025limcallmautomatinganalog,
+      title={LIMCA: LLM for Automating Analog In-Memory Computing Architecture Design Exploration}, 
+      author={Deepak Vungarala and Md Hasibul Amin and Pietro Mercati and Arnob Ghosh and Arman Roohi and Ramtin Zand and Shaahin Angizi},
+      year={2025},
+      eprint={2503.13301},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR},
+      url={https://arxiv.org/abs/2503.13301}, 
+}
+```
+
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+**Acknowledgment:** We reference [iCAS-Lab/IMAC-Sim](https://github.com/iCAS-Lab/IMAC-Sim) as an external dependency via Git submodule. Please consult their repository for their terms. No code from IMAC-Sim is copied into this repository.
